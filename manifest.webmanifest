@@ -1,0 +1,9 @@
+{
+  "name": "Malia AI",
+  "short_name": "Malia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#11101f",
+  "theme_color": "#17152d",
+  "description": "Your personal AI assistant"
+}
