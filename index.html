@@ -88,8 +88,8 @@ async function send(text){
  try{
   const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages})});
   const d=await r.json();if(!r.ok)throw new Error(d.error||'Something went wrong.');
-  wait.remove();addBubble('assistant',d.answer);messages.push({role:'assistant',content:d.answer});save();
-  if(document.getElementById('speakToggle').checked)speak(d.answer);
+  wait.remove();addBubble('assistant',d.answer);messages.push({role:'assistant',content:d.reply});save();
+  if(document.getElementById('speakToggle').checked)speak(d.reply);
  }catch(e){wait.remove();addBubble('assistant','I could not connect just now. '+e.message); }
 }
 document.getElementById('sendBtn').onclick=()=>send();
